@@ -6,7 +6,7 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
       <nav className="w-full bg-white shadow-md py-4 px-6 fixed top-0 flex justify-between items-center">
-        <h2 className="text-2xl font-bold text-gray-900">Ateliê Encanto</h2>
+        <h2 className="text-2xl font-bold text-gray-900">Dani Ateliê</h2>
         <ul className="flex space-x-6 text-gray-700">
           <li className="hover:text-pink-600 transition"><a href="#about">Sobre</a></li>
           <li className="hover:text-pink-600 transition"><a href="#gallery">Galeria</a></li>
@@ -15,7 +15,7 @@ export default function Page() {
       </nav>
 
       <header className="w-full max-w-4xl mx-auto text-center py-24 mt-16">
-        <h1 className="text-5xl font-extrabold text-gray-900">Ateliê Encanto</h1>
+        <h1 className="text-5xl font-extrabold text-gray-900">Dani Ateliê</h1>
         <p className="text-gray-600 mt-2 text-lg">Arte feita à mão com amor e dedicação</p>
       </header>
 
@@ -29,7 +29,7 @@ export default function Page() {
       </main>
 
       <footer className="w-full bg-white shadow-md py-4 mt-12 text-center text-gray-600">
-        &copy; 2025 Ateliê Encanto. Todos os direitos reservados.
+        &copy; 2025 Dani Ateliê. Todos os direitos reservados.
       </footer>
     </div>
   );
