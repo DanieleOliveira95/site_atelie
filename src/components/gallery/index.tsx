@@ -10,21 +10,23 @@ const galleryItems = [
 
 export default function Gallery() {
   return (
-    <section className="w-full max-w-6xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <section className="w-full max-w-6xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
       {galleryItems.map((item, index) => (
-        <div key={index} className="bg-white p-4 shadow-lg rounded-lg">
-          <div className="w-full h-[400px] relative">
-            <Image 
-              src={item.src} 
-              alt={item.title} 
-              layout="fill" 
-              objectFit="cover" 
+        <article key={index} className="card p-4">
+          <div className="w-full relative aspect-[4/3] overflow-hidden rounded-md">
+            <Image
+              src={item.src}
+              alt={item.title}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              style={{ objectFit: "cover" }}
               className="rounded-md"
+              priority={index < 3}
             />
           </div>
-          <h3 className="text-xl font-bold text-center text-[#5A3E2B] mt-4">{item.title}</h3>
-          <p className="text-[#8C5A43] mt-2">{item.description}</p>
-        </div>
+          <h3 className="text-lg font-semibold text-center mt-4">{item.title}</h3>
+          <p className="text-sm text-[var(--accent)] mt-2 text-center">{item.description}</p>
+        </article>
       ))}
     </section>
   );

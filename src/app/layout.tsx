@@ -22,14 +22,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-BR">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className="min-h-screen bg-[#F5E7D3] flex flex-col">
-          <Navbar /> {/* Agora a Navbar é um componente separado */}
-          <main className="flex-1 flex flex-col items-center justify-center p-6 font-serif pt-20 pb-16">
+        <div className="min-h-screen bg-[var(--page-bg)] flex flex-col text-[var(--text-color)]">
+          <Navbar />
+          <main id="main-content" className="flex-1 flex flex-col items-center justify-start p-6 font-serif pt-28 pb-16 w-full">
             {children}
           </main>
-          <footer className="w-full bg-[#8C5A43] text-white shadow-md py-2 text-center fixed bottom-0 left-0">
+          <footer className="w-full bg-[var(--accent-dark)] text-white shadow-inner py-4 text-center">
             &copy; 2025 Dani Ateliê. Todos os direitos reservados.
           </footer>
           <WhatsAppButton />
