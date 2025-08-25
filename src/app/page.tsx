@@ -34,7 +34,7 @@ export default function Page() {
       </main>
 
       <section className="mt-12 w-full px-4 container">
-        <Gallery />
+        <Gallery limit={3} showDescription={false} />
       </section>
 
       {/* Seção única de apresentação e galeria (removida duplicação) */}

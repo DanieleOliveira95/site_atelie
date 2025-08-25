@@ -8,10 +8,12 @@ const galleryItems = [
   { src: "/img/Cropped.jpg", title: "Cropped Flowers", description: "Cropped com aplicação de maxi flor e costas ajustável." },
 ];
 
-export default function Gallery() {
+export default function Gallery({ showDescription = true, limit }: { showDescription?: boolean; limit?: number }) {
+  const items = typeof limit === 'number' ? galleryItems.slice(0, limit) : galleryItems;
+
   return (
     <section className="w-full max-w-6xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
-      {galleryItems.map((item, index) => (
+      {items.map((item, index) => (
         <article key={index} className="card p-4">
           <div className="w-full relative aspect-[4/3] overflow-hidden rounded-md">
             <Image
@@ -24,8 +26,8 @@ export default function Gallery() {
               priority={index < 3}
             />
           </div>
-          <h3 className="text-lg font-semibold text-center mt-4">{item.title}</h3>
-          <p className="text-sm text-[var(--accent)] mt-2 text-center">{item.description}</p>
+          <h3 className={`text-lg font-semibold text-center mt-4 ${!showDescription ? 'mb-2' : ''}`}>{item.title}</h3>
+          {showDescription && <p className="text-sm text-[var(--accent)] mt-2 text-center">{item.description}</p>}
         </article>
       ))}
     </section>
