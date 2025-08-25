@@ -52,10 +52,10 @@ export default function Fotos() {
           <button
             key={index}
             onClick={() => openModal(index)}
-            className="relative cursor-pointer rounded-lg overflow-hidden shadow-md hover:scale-105 transition-transform duration-300"
+            className="relative cursor-pointer rounded-lg overflow-hidden shadow-md hover:scale-[1.02] transition-transform duration-200"
             aria-label={`Abrir foto: ${item.title}`}
           >
-            <div className="relative w-full aspect-square">
+            <div className="relative w-full aspect-[4/3]">
               <Image
                 src={item.src}
                 alt={item.title}

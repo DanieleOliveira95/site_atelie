@@ -37,18 +37,8 @@ export default function Page() {
         <Gallery />
       </section>
 
-      <main className="flex flex-col items-center mt-6 px-4 text-center">
-        <p className="text-2xl text-[#5A3E2B] max-w-3xl leading-relaxed">
-          Descubra peças únicas e artesanais, criadas com paixão e criatividade. Cada detalhe reflete o amor pela arte.
-        </p>
-        <Link href="/galeria">
-          <button className="mt-6 px-8 py-3 bg-[#8C5A43] text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-[#5A3E2B] transition-transform transform hover:scale-105">
-            Conheça Nossos Trabalhos
-          </button>
-        </Link>
-      </main>
-
-      <section className="mt-12 w-full px-4">
+      {/* Seção única de apresentação e galeria (removida duplicação) */}
+      <section className="mt-12 w-full px-4 container">
         <Gallery />
       </section>
     </>
