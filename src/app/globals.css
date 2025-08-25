@@ -41,5 +41,23 @@ h1,h2,h3,h4{
 .card {
   background: var(--surface);
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(31,26,23,0.08);
+  box-shadow: 0 8px 26px rgba(31,26,23,0.06);
 }
+
+button, .btn {
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+}
+
+.btn-soft {
+  background: var(--accent);
+  color: white;
+  padding: .6rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(140,90,67,0.12);
+}
+
+.btn-soft:hover { transform: translateY(-3px); }
+
+/* Hero specific */
+.hero-title { font-weight: 800; letter-spacing: -0.02em; }
+.hero-sub { color: var(--accent-dark); }

@@ -25,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <div className="min-h-screen bg-[var(--page-bg)] flex flex-col text-[var(--text-color)]">
+          <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:bg-[var(--surface)] focus:text-[var(--accent-dark)] focus:px-3 focus:py-2 rounded-md">Ir para o conteúdo</a>
           <Navbar />
           <main id="main-content" className="flex-1 flex flex-col items-center justify-start p-6 font-serif pt-28 pb-16 w-full">
             {children}

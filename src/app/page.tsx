@@ -10,11 +10,11 @@ export default function Page() {
       <header className="w-full bg-[var(--muted)] py-12">
         <div className="container flex flex-col md:flex-row items-center gap-8">
           <div className="flex-1">
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">Dani Ateliê</h1>
-            <p className="mt-4 text-lg md:text-xl text-[var(--accent-dark)] max-w-2xl">Peças artesanais em crochê feitas à mão com carinho — design atemporal e acabamento cuidadoso.</p>
+            <h1 className="hero-title text-4xl md:text-6xl">Dani Ateliê</h1>
+            <p className="hero-sub mt-4 text-lg md:text-xl max-w-2xl">Peças artesanais em crochê feitas à mão com carinho — design atemporal e acabamento cuidadoso.</p>
             <div className="mt-6">
               <Link href="/galeria" className="inline-block">
-                <button className="px-6 py-3 bg-[var(--accent)] text-white rounded-lg shadow-md hover:bg-[var(--accent-dark)] transition transform hover:-translate-y-0.5">Conheça a Galeria</button>
+                <button className="btn-soft">Conheça a Galeria</button>
               </Link>
             </div>
           </div>
