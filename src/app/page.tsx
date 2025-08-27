@@ -3,6 +3,10 @@
 import Link from "next/link";
 import React from "react";
 import Gallery from "@/components/gallery";
+import dynamic from "next/dynamic";
+
+// dynamic import do componente client-side (cast para o tipo de componente esperado)
+const BannerCarousel = dynamic(() => import("@/components/banner"), { ssr: false }) as React.ComponentType<{ interval?: number }>;
 
 export default function Page() {
   return (
@@ -20,8 +24,10 @@ export default function Page() {
           </div>
 
           <div className="flex-1 hidden md:block">
-            <div className="w-full max-w-md mx-auto rounded-lg overflow-hidden shadow-lg">
-              <img src="/img/conjunto.jpg" alt="Conjunto artesanal Dani" className="w-full h-72 object-cover" />
+            <div className="w-full max-w-md mx-auto">
+              {/* Banner carousel usando imagens da galeria */}
+              {/* Componente client-side */}
+              <BannerCarousel />
             </div>
           </div>
         </div>
@@ -33,14 +39,11 @@ export default function Page() {
         </p>
       </main>
 
-      <section className="mt-12 w-full px-4 container">
+      <section className="mt-6 w-full px-4 container">
         <Gallery limit={3} showDescription={false} />
       </section>
 
-      {/* Seção única de apresentação e galeria (removida duplicação) */}
-      <section className="mt-12 w-full px-4 container">
-        <Gallery />
-      </section>
+    
     </>
   );
 }

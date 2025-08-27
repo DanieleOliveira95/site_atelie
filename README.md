@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+## site_atelie
+
+Landing page do ateliê construída com Next.js + TypeScript para apresentar produtos, galeria e contato.
+
+### Status
+- Em desenvolvimento — branch: `feat/ux-design`
+
+### Preview
+- Adicione capturas em `img/` e substitua o link abaixo (opcional):
+	![Preview](/img/preview.png)
+
+### Principais funcionalidades
+- Página inicial responsiva
+- Galeria de produtos com visualização de imagens
+- Página de contato com botão para WhatsApp
+- Componentes reutilizáveis (navbar, banner, gallery)
+- Estilização com Tailwind CSS
+
+### Stack
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Node.js >= 16
+
+### Pré-requisitos
+- Node.js (versão compatível com o projeto)
+- npm, pnpm ou yarn
+
+### Instalação
+1. Clone o repositório:
+```bash
+git clone <repo-url>
+cd site_atelie
+```
+2. Instale dependências:
+```bash
+npm install
+# ou
+pnpm install
+# ou
+yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Executar localmente
+- Desenvolvimento:
+```bash
+npm run dev
+```
+- Build e produção local:
+```bash
+npm run build
+npm run start
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Scripts úteis (verifique o `package.json`)
+- dev — inicia em modo desenvolvimento
+- build — gera build de produção
+- start — executa build em produção
+- lint — executa ESLint
+- format — executa Prettier (se configurado)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Estrutura do projeto (resumo)
+- `src/app/` — rotas e páginas (App Router)
+- `src/components/` — componentes (navbar, gallery, banner, whatsappButton)
+- `public/` — assets públicos
+- `img/` — fotos dos produtos
+- `minha-landing-page/` — (subprojeto / variante) — 
 
-## Learn More
+### Variáveis de ambiente
+Crie um `.env.local` (não commitar). Exemplos:
+```
+NEXT_PUBLIC_API_URL=
+NEXT_PUBLIC_WHATSAPP_NUMBER=
+```
+### Deploy
+- Recomendado: Vercel — conectar o repositório e usar `npm run build`.
+- Configure variáveis de ambiente no painel do Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+### Como contribuir
+1. Abra uma issue descrevendo a mudança.
+2. Crie uma branch `feat/<descricao>` ou `fix/<descricao>`.
+3. Abra um pull request referenciando a issue.
+4. Rode `npm run lint` e `npm run format` antes do PR.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Contato
+- Autor: Daniele Oliveira
+- GitHub: @DanieleOliveira95
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
